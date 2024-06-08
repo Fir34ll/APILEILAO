@@ -2,11 +2,11 @@ from fastapi import FastAPI, HTTPException, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 from database import SessionLocal, engine, Base
-import models
+import app.models as models
 from datetime import datetime
 import uvicorn
 
-import schemas
+import app.schemas as schemas
 
 Base.metadata.create_all(bind=engine)
 
